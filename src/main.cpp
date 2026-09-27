@@ -7,7 +7,6 @@
 
 using namespace geode::prelude;
 
-// --- HUB LAYER: MAIN MENU INTEGRATION ---
 class $modify(NiceMainHub, MenuLayer) {
     bool init() {
         if (!MenuLayer::init()) return false;
@@ -78,7 +77,6 @@ class $modify(NiceMainHub, MenuLayer) {
     }
 };
 
-// --- GAMEPLAY LAYER: RUBBER-BANDING, DEATH CAMS & TELEMETRY ---
 class $modify(NiceGamePlay, PlayLayer) {
     bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
         if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
@@ -124,7 +122,6 @@ class $modify(NiceGamePlay, PlayLayer) {
     }
 };
 
-// --- PAUSE LAYER: EMOTE WHEEL & TACTICAL TAUNTS ---
 class $modify(NicePauseOverlay, PauseLayer) {
     void customSetup() {
         PauseLayer::customSetup();
